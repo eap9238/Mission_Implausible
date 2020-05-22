@@ -26,7 +26,9 @@ a:hover {
 
 html,
 body {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: #30576c;
 }
 
@@ -70,8 +72,7 @@ small {
 }
 
 .card-img-top img{
-	width: inherit;
-	
+	width: inherit;	
 }
 
 /*
