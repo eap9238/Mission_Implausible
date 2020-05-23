@@ -61,6 +61,10 @@ small {
 	background-color: #f8f8f8;
 }
 
+.block {
+	background-color: #f8f8f8;
+}
+
 .inner {
 	max-width: 42em;
 }
