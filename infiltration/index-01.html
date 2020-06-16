@@ -30,7 +30,7 @@
 					document.location.href = "index-02.html";
 				}
 				else if (/^([0-9]{4})$/.test(input)) {
-					document.getElementById("inputField").setCustomValidity("Incorrect code");
+					document.getElementById("inputField").classList.add("invalid");
 				}
 				
 				return false;

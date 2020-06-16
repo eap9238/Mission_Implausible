@@ -19,7 +19,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		
 		<script>
-			function submit() {
+			function doSubmit() {
 				document.location.href = "index-03.html";
 			}
 		</script>
@@ -31,7 +31,7 @@
 		</style>
 	</head>
 
-	<body onload="setup()">
+	<body>
 	  <div class="container">
 		<div class="row">
 		  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
@@ -50,8 +50,8 @@
 			</div>
 			<div class="card card-signin my-5">
 			  <div class="card-body">
-				<form class="form-submit" id="form-submit">
-				  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" onclick="submit()">Next</button>
+				<form class="form-submit" id="form-submit" onsubmit="return doSubmit();">
+				  <input class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" value="Submit" />
 				</form>
 			  </div>
 			</div>
