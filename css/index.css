@@ -155,8 +155,23 @@ small {
   }
 }
 
-.panel-title {
-	color: #30576c;
+.panel-title a {
+	color: #f8f8f8;
+	
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.accordion {
+	background: #82d0f1;
+	border: #82d0f1;
+	border-radius: 5px;
+}
+
+.btn-primary {
+	background-color: #82d0f1;
+	border-color: #82d0f1;
 }
 
 
