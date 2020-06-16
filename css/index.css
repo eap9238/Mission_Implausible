@@ -105,6 +105,10 @@ small {
 	text-align: left;
 }
 
+.collapse.in {
+	display: block !important;
+}
+
 /*
  * Header
  */
@@ -145,6 +149,10 @@ small {
   .nav-masthead {
     float: right;
   }
+}
+
+.panel-title {
+	color: #30576c;
 }
 
 
