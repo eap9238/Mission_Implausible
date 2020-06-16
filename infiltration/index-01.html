@@ -22,14 +22,9 @@
 			var code = "3893";
 			var input = "0000";
 			
-			function setup() {
-				document.getElementById('form-submit').onsubmit = function(e) {
-					e.preventDefault();
-				}
-			}
-			
-			function submit() {
+			function doSubmit() {				
 				input = document.getElementById("inputField").value;
+				console.log(input);
 				
 				if (input == code){
 					document.location.href = "index-02.html";
@@ -37,6 +32,8 @@
 				else if (/^([0-9]{4})$/.test(input)) {
 					document.getElementById("inputField").setCustomValidity("Incorrect code");
 				}
+				
+				return false;
 			}
 		</script>
 		
@@ -47,7 +44,7 @@
 		</style>
 	</head>
 
-	<body onload="setup()">
+	<body>
 	  <div class="container">
 		<div class="row">
 		  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
@@ -101,17 +98,18 @@
 				 </div> 
 			  </div>
 			</div>
+			  
 			<div class="card card-signin my-5">
 			  <div class="card-body">
-				<form class="form-submit" id="form-submit">
+				<form class="form-submit" id="form-submit" onsubmit="return doSubmit();">
 				  <div class="form-label-group">
 					<label for="inputField">Lock Combination</label>
-					<input type="text" id="inputField" class="form-control" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required autofocus>
+					<input type="text" id="inputField" class="form-control" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
 				  </div>
+					
+					<br/>
 
-				  <div class="custom-control custom-checkbox mb-3">
-				  </div>
-				  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" onclick="submit()">Submit</button>
+				  <input class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" value="Submit" />
 				</form>
 			  </div>
 			</div>
