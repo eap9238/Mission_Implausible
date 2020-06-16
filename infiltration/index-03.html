@@ -19,17 +19,35 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		
 		<script>
-			var code = "3893";
+			var code = "star";
 			var input = "0000";
 			
-			function doSubmit() {				
-				input = document.getElementById("inputField").value;
+			function doSelect(idCode) {
 				
-				if (input == code){
-					document.location.href = "index-02.html";
+				if (input != "0000"){
+					document.getElementById(input).classList.remove("selected");
+					document.getElementById(input).classList.remove("invalid");
 				}
-				else if (/^([0-9]{4})$/.test(input)) {
-					document.getElementById("inputField").classList.add("invalid");
+				
+				
+				if (input != idCode) {
+					document.getElementById(idCode).classList.add("selected");
+					input = idCode;
+				}
+				else {
+					input = "0000";
+				}
+			}
+			
+			function doSubmit() {
+				if (input == code){
+					document.location.href = "index-04.html";
+				}
+				else {
+					var temp = document.getElementById(input);
+					
+					temp.classList.remove("selected");
+					temp.classList.add("invalid");
 				}
 				
 				return false;
@@ -49,12 +67,12 @@
 		  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
 			<div class="card card-signin my-5">
 			  <div class="card-body">
-				<h5 class="card-title text-center">Padlock</h5>
+				<h5 class="card-title text-center">Minefield</h5>
 				
 				<br/>
 				  
 				<p class="card-text text-center">
-					Welcome agent! While we "developed" your last batch of film, we've inculded the requisite mission materials. Please input your lock's combination and we'll get cracking on this case!
+					We have reason to believe that your target launched the majority of his notes and findings into nearby no-man's land for pickup by German agents. Please sort through the unexploded ordinance on the field in order to recover the documents!
 				</p>
 				  
 				<br/>
@@ -67,7 +85,7 @@
 						</h4>
 					  </div>
 					  <div id="collapse1" class="panel-collapse collapse">
-						<div class="panel-body">Have you tried inspecting the box?
+						<div class="panel-body">Try solving the minesweeper pages first.
 						</div>
 						<br/>
 					  </div>
@@ -79,7 +97,7 @@
 						</h4>
 					  </div>
 					  <div id="collapse2" class="panel-collapse collapse">
-						<div class="panel-body">Some parts of a camera case may be removable. </div>
+						<div class="panel-body">Be sure to only count rows and colums with bombs in them for the coordinates. </div>
 						<br/>
 					  </div>
 					</div>
@@ -90,7 +108,7 @@
 						</h4>
 					  </div>
 					  <div id="collapse3" class="panel-collapse collapse">
-						<div class="panel-body">3893 </div>
+						<div class="panel-body">Star </div>
 						<br/>
 					  </div>
 					</div>
@@ -102,8 +120,19 @@
 			  <div class="card-body">
 				<form class="form-submit" id="form-submit" onsubmit="return doSubmit();">
 				  <div class="form-label-group">
-					<label for="inputField">Lock Combination</label>
-					<input type="text" id="inputField" class="form-control" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+					<label for="inputField">Canister Mark</label>
+					
+					  <div class="row">
+					  	<div class="col-4 imgfit nopad" id="cross">
+							<img src="../images/vector-cross.png" onclick="doSelect('cross')">
+						</div>
+					  	<div class="col-4 imgfit nopad" id="ring">
+							<img src="../images/vector-ring.png" onclick="doSelect('ring')">
+						</div>
+					  	<div class="col-4 imgfit nopad" id="star">
+							<img src="../images/vector-star.png" onclick="doSelect('star')">
+						</div>
+					  </div>
 				  </div>
 					
 					<br/>

@@ -176,7 +176,23 @@ small {
 
 .invalid {
 	border-color: red;
-	box-shadow: 0 0 3px red;
+	box-shadow: 0 0 5px red;
+}
+
+.selected {
+	border-color: gold !important;
+	box-shadow: 0 0 5px gold;
+}
+
+.nopad {
+	padding-left: 0px;
+	padding-right: 0px;
+	border: transparent;
+	border-radius: 5px;
+}
+
+.margin-r-1 {
+	margin-right: auto;
 }
 
 

@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="images/favicon.ico">
+
+		<title>Mission Implausible: The Infiltration Incident</title>
+		
+		<!-- Bootstrap core CSS → -->
+		<link href="../css/bootstrap.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="../css/index.css" rel="stylesheet">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
+		<script>
+			var a = ["Brandt", "Red", "35"];
+			var b = ["Meyer", "Green", "30"];
+			var c = ["Schultz", "Blue", "20"];
+			var d = ["Kohler", "Yellow", "25"];
+			
+			var inputA = ["0000", "0000", "0000"];
+			var inputB = ["0000", "0000", "0000"];
+			var inputC = ["0000", "0000", "0000"];
+			var inputD = ["0000", "0000", "0000"];
+			
+			function doSubmit() {
+				var bool = true;
+				
+				doReset();
+				
+				inputA[0] = document.getElementById("aGeneral").value;
+				inputA[1] = document.getElementById("aColour").value;
+				inputA[2] = document.getElementById("aCount").value;
+				
+				inputB[0] = document.getElementById("bGeneral").value;
+				inputB[1] = document.getElementById("bColour").value;
+				inputB[2] = document.getElementById("bCount").value;
+				
+				inputC[0] = document.getElementById("cGeneral").value;
+				inputC[1] = document.getElementById("cColour").value;
+				inputC[2] = document.getElementById("cCount").value;
+				
+				inputD[0] = document.getElementById("dGeneral").value;
+				inputD[1] = document.getElementById("dColour").value;
+				inputD[2] = document.getElementById("dCount").value;
+				
+				//test
+				if (inputA[0] != a[0] || inputA[1] != a[1] || inputA[2] != a[2]) {
+					document.getElementById("aGeneral").classList.add("invalid");
+					document.getElementById("aColour").classList.add("invalid");
+					document.getElementById("aCount").classList.add("invalid");
+					
+					bool = false;
+				}
+				else {
+					document.getElementById("aGeneral").classList.add("selected");
+					document.getElementById("aColour").classList.add("selected");
+					document.getElementById("aCount").classList.add("selected");
+				}
+				
+				if (inputB[0] != b[0] || inputB[1] != b[1] || inputB[2] != b[2]) {
+					document.getElementById("bGeneral").classList.add("invalid");
+					document.getElementById("bColour").classList.add("invalid");
+					document.getElementById("bCount").classList.add("invalid");
+					
+					bool = false;
+				}
+				else {
+					document.getElementById("bGeneral").classList.add("selected");
+					document.getElementById("bColour").classList.add("selected");
+					document.getElementById("bCount").classList.add("selected");
+				}
+				
+				if (inputC[0] != c[0] || inputC[1] != c[1] || inputC[2] != c[2]) {
+					document.getElementById("cGeneral").classList.add("invalid");
+					document.getElementById("cColour").classList.add("invalid");
+					document.getElementById("cCount").classList.add("invalid");
+					
+					bool = false;
+				}
+				else {
+					document.getElementById("cGeneral").classList.add("selected");
+					document.getElementById("cColour").classList.add("selected");
+					document.getElementById("cCount").classList.add("selected");
+				}
+				
+				if (inputD[0] != d[0] || inputD[1] != d[1] || inputD[2] != d[2]) {
+					document.getElementById("dGeneral").classList.add("invalid");
+					document.getElementById("dColour").classList.add("invalid");
+					document.getElementById("dCount").classList.add("invalid");
+					
+					bool = false;
+				}
+				else {
+					document.getElementById("dGeneral").classList.add("selected");
+					document.getElementById("dColour").classList.add("selected");
+					document.getElementById("dCount").classList.add("selected");
+				}
+				
+				if (bool) {
+					document.location.href = "index-06.html";
+				}
+				
+				return false;
+			}
+			
+			function doReset() {
+				document.getElementById("aGeneral").classList.remove("invalid");
+				document.getElementById("aColour").classList.remove("invalid");
+				document.getElementById("aCount").classList.remove("invalid");
+				document.getElementById("aGeneral").classList.remove("selected");
+				document.getElementById("aColour").classList.remove("selected");
+				document.getElementById("aCount").classList.remove("selected");
+				
+				document.getElementById("bGeneral").classList.remove("invalid");
+				document.getElementById("bColour").classList.remove("invalid");
+				document.getElementById("bCount").classList.remove("invalid");
+				document.getElementById("bGeneral").classList.remove("selected");
+				document.getElementById("bColour").classList.remove("selected");
+				document.getElementById("bCount").classList.remove("selected");
+				
+				document.getElementById("cGeneral").classList.remove("invalid");
+				document.getElementById("cColour").classList.remove("invalid");
+				document.getElementById("cCount").classList.remove("invalid");
+				document.getElementById("cGeneral").classList.remove("selected");
+				document.getElementById("cColour").classList.remove("selected");
+				document.getElementById("cCount").classList.remove("selected");
+			}
+		</script>
+		
+		<style>
+			.in {
+				display: block !important;
+			}
+		</style>
+	</head>
+
+	<body>
+	  <div class="container">
+		<div class="row">
+		  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+			<div class="card card-signin my-5">
+			  <div class="card-body">
+				<h5 class="card-title text-center">Troop Data</h5>
+				
+				<br/>
+				  
+				<p class="card-text text-center">
+					The capsule you recovered contained scattered references to the learders of the german forces in the area and their troop movements. If you can sort through the data here, the resistance movements in your area will be greatly bolstered!
+				</p>
+				  
+				<br/>
+				  
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+						<h4 class="panel-title">
+						  <a data-toggle="collapse" class="btn accordion" data-parent="#accordion" href="#collapse1">Hint #1</a>
+						</h4>
+					  </div>
+					  <div id="collapse1" class="panel-collapse collapse">
+						<div class="panel-body">Have you tried inspecting the box?
+						</div>
+						<br/>
+					  </div>
+					</div>
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+						<h4 class="panel-title">
+						  <a data-toggle="collapse" class="btn accordion" data-parent="#accordion" href="#collapse2">Hint #2</a>
+						</h4>
+					  </div>
+					  <div id="collapse2" class="panel-collapse collapse">
+						<div class="panel-body">Some parts of a camera case may be removable. </div>
+						<br/>
+					  </div>
+					</div>
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+						<h4 class="panel-title">
+						  <a data-toggle="collapse" class="btn accordion" data-parent="#accordion" href="#collapse3">Hint #3</a>
+						</h4>
+					  </div>
+					  <div id="collapse3" class="panel-collapse collapse">
+						<div class="panel-body">3893 </div>
+						<br/>
+					  </div>
+					</div>
+				 </div> 
+			  </div>
+			</div>
+			  
+			<div class="card card-signin my-5">
+			  <div class="card-body">
+				<form class="form-submit" id="form-submit" onsubmit="return doSubmit();">
+				  <div class="form-label-group">
+					<label for="inputField">Sorted Data</label>
+					  <div class="row">
+						<input type="text" class="form-control col-2 margin-r-1" value="A" disabled required>
+						<select id="aGeneral" class="form-control col-9" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+							<option>Brandt</option>
+							<option>Kohler</option>
+							<option>Meyer</option>
+							<option>Schultz</option>
+						</select>
+						<div class="col-3"></div>
+						<select id="aColour" class="form-control col-9" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+							<option>Blue</option>
+							<option>Green</option>
+							<option>Red</option>
+							<option>Yellow</option>
+						</select>
+						<div class="col-3"></div>
+						<select id="aCount" class="form-control col-9" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+							<option>20</option>
+							<option>25</option>
+							<option>30</option>
+							<option>35</option>
+						</select>
+					  </div>
+					  
+					  <div class="row">
+						<input type="text" class="form-control col-2 margin-r-1" value="B" disabled required>
+						<select id="bGeneral" class="form-control col-9" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+							<option>Brandt</option>
+							<option>Kohler</option>
+							<option>Meyer</option>
+							<option>Schultz</option>
+						</select>
+						<div class="col-3"></div>
+						<select id="bColour" class="form-control col-9" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+							<option>Blue</option>
+							<option>Green</option>
+							<option>Red</option>
+							<option>Yellow</option>
+						</select>
+						<div class="col-3"></div>
+						<select id="bCount" class="form-control col-9" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+							<option>20</option>
+							<option>25</option>
+							<option>30</option>
+							<option>35</option>
+						</select>
+					  </div>
+					  
+					  <div class="row">
+						<input type="text" class="form-control col-2 margin-r-1" value="C" disabled required>
+						<select id="cGeneral" class="form-control col-9" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+							<option>Brandt</option>
+							<option>Kohler</option>
+							<option>Meyer</option>
+							<option>Schultz</option>
+						</select>
+						<div class="col-3"></div>
+						<select id="cColour" class="form-control col-9" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+							<option>Blue</option>
+							<option>Green</option>
+							<option>Red</option>
+							<option>Yellow</option>
+						</select>
+						<div class="col-3"></div>
+						<select id="cCount" class="form-control col-9" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+							<option>20</option>
+							<option>25</option>
+							<option>30</option>
+							<option>35</option>
+						</select>
+					  </div>
+					  
+					  <div class="row">
+						<input type="text" class="form-control col-2 margin-r-1" value="D" disabled required>
+						<select id="dGeneral" class="form-control col-9" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+							<option>Brandt</option>
+							<option>Kohler</option>
+							<option>Meyer</option>
+							<option>Schultz</option>
+						</select>
+						<div class="col-3"></div>
+						<select id="dColour" class="form-control col-9" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+							<option>Blue</option>
+							<option>Green</option>
+							<option>Red</option>
+							<option>Yellow</option>
+						</select>
+						<div class="col-3"></div>
+						<select id="dCount" class="form-control col-9" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+							<option>20</option>
+							<option>25</option>
+							<option>30</option>
+							<option>35</option>
+						</select>
+					  </div>
+				  </div>
+					
+					<br/>
+
+				  <input class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" value="Submit" />
+				</form>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</body>
+	
+</html>
