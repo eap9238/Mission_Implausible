@@ -97,7 +97,7 @@ small {
 }
 
 .imgfit img {
-	width: inherit;	
+	width: 100%;	
 	border-radius: 5px;
 }
 

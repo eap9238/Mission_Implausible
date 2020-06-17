@@ -19,16 +19,16 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		
 		<script>
-			var code = "3893";
+			var code = "strasbourg";
 			var input = "0000";
 			
 			function doSubmit() {				
-				input = document.getElementById("inputField").value;
+				input = document.getElementById("inputField").value.toLowerCase();
 				
 				if (input == code){
-					document.location.href = "index-02.html";
+					document.location.href = "index-16.html";
 				}
-				else if (/^([0-9]{4})$/.test(input)) {
+				else if (/^([A-Z a-z]{1,})$/.test(input)) {
 					document.getElementById("inputField").classList.add("invalid");
 				}
 				
@@ -49,12 +49,16 @@
 		  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
 			<div class="card card-signin my-5">
 			  <div class="card-body">
-				<h5 class="card-title text-center">Padlock</h5>
+				<h5 class="card-title text-center">Manhunt</h5>
 				
 				<br/>
 				  
 				<p class="card-text text-center">
-					Welcome agent! While we "developed" your last batch of film, we've inculded the requisite mission materials. Please input your lock's combination and we'll get cracking on the case of the rogue agent N. E. Body. 
+					Terrible news, agent. Turncoat spy Nedward (Ned) Edward Body had apparently managed to make off with some incredibly sensitive information before he turned traitor. While I'm not at liberty to explain the details of it, know that it is essential that you capture him before he can reach Paris. 
+					
+					<br /> <br /> 
+					
+					Use the ticket stubs and reciepts we've been collecting to trace his route, and get us his current location ASAP. He probably won't be willing to double back on his trail, but we cannot garruntee he'll take the most sensible route either. 
 				</p>
 				  
 				<br/>
@@ -67,7 +71,7 @@
 						</h4>
 					  </div>
 					  <div id="collapse1" class="panel-collapse collapse">
-						<div class="panel-body">Have you tried inspecting the box?
+						<div class="panel-body">All the stubs should have a listed number on them, and each has a colour that indicates the mode of transportation. 
 						</div>
 						<br/>
 					  </div>
@@ -79,7 +83,7 @@
 						</h4>
 					  </div>
 					  <div id="collapse2" class="panel-collapse collapse">
-						<div class="panel-body">Some parts of a camera case may be removable. </div>
+						<div class="panel-body">Check through the box again -- there might be something you missed.</div>
 						<br/>
 					  </div>
 					</div>
@@ -90,7 +94,7 @@
 						</h4>
 					  </div>
 					  <div id="collapse3" class="panel-collapse collapse">
-						<div class="panel-body">3893 </div>
+						<div class="panel-body">Strasbourg</div>
 						<br/>
 					  </div>
 					</div>
@@ -102,8 +106,8 @@
 			  <div class="card-body">
 				<form class="form-submit" id="form-submit" onsubmit="return doSubmit();">
 				  <div class="form-label-group">
-					<label for="inputField">Lock Combination</label>
-					<input type="text" id="inputField" class="form-control" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+					<label for="inputField">Final Location</label>
+					<input type="text" id="inputField" class="form-control" placeholder=". . ." pattern="[A-Z a-z]{1,}" title="Word or phrase containing only letters, no numbers or punctuation." required>
 				  </div>
 					
 					<br/>

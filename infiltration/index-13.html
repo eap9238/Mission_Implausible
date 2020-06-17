@@ -19,16 +19,16 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		
 		<script>
-			var code = "3893";
+			var code = "overlord";
 			var input = "0000";
 			
 			function doSubmit() {				
-				input = document.getElementById("inputField").value;
+				input = document.getElementById("inputField").value.toLowerCase();
 				
 				if (input == code){
-					document.location.href = "index-02.html";
+					document.location.href = "index-14.html";
 				}
-				else if (/^([0-9]{4})$/.test(input)) {
+				else if (/^([A-Z a-z]{1,})$/.test(input)) {
 					document.getElementById("inputField").classList.add("invalid");
 				}
 				
@@ -49,12 +49,12 @@
 		  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
 			<div class="card card-signin my-5">
 			  <div class="card-body">
-				<h5 class="card-title text-center">Padlock</h5>
+				<h5 class="card-title text-center">Morse Code</h5>
 				
 				<br/>
 				  
 				<p class="card-text text-center">
-					Welcome agent! While we "developed" your last batch of film, we've inculded the requisite mission materials. Please input your lock's combination and we'll get cracking on the case of the rogue agent N. E. Body. 
+					Glad the package reached you safely! We were able to find scraps to a morse code message we think Mr. Body was trying to send out, but it looks like his transponder was broken. Your next assignment is to find out what he was trying to send out -- maybe that will shed light on where he's fled to?
 				</p>
 				  
 				<br/>
@@ -67,7 +67,10 @@
 						</h4>
 					  </div>
 					  <div id="collapse1" class="panel-collapse collapse">
-						<div class="panel-body">Have you tried inspecting the box?
+						<div class="panel-body">
+							In case you don't have one to hand
+							<div class="imgfit">
+							<img src="../images/morse.png"></div>
 						</div>
 						<br/>
 					  </div>
@@ -79,7 +82,7 @@
 						</h4>
 					  </div>
 					  <div id="collapse2" class="panel-collapse collapse">
-						<div class="panel-body">Some parts of a camera case may be removable. </div>
+						<div class="panel-body">Some letters may be different upside down. </div>
 						<br/>
 					  </div>
 					</div>
@@ -102,8 +105,8 @@
 			  <div class="card-body">
 				<form class="form-submit" id="form-submit" onsubmit="return doSubmit();">
 				  <div class="form-label-group">
-					<label for="inputField">Lock Combination</label>
-					<input type="text" id="inputField" class="form-control" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+					<label for="inputField">Message</label>
+					<input type="text" id="inputField" class="form-control" placeholder=". . ." pattern="[A-Z a-z]{1,}" title="Word or phrase containing only letters, no numbers or punctuation." required>
 				  </div>
 					
 					<br/>

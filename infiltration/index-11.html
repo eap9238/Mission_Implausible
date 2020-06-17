@@ -19,16 +19,16 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		
 		<script>
-			var code = "3893";
+			var code = "the spanish inquisition";
 			var input = "0000";
 			
 			function doSubmit() {				
-				input = document.getElementById("inputField").value;
+				input = document.getElementById("inputField").value.toLowerCase();
 				
 				if (input == code){
-					document.location.href = "index-02.html";
+					document.location.href = "index-12.html";
 				}
-				else if (/^([0-9]{4})$/.test(input)) {
+				else if (/^([A-Za-z]{1,})$/.test(input)) {
 					document.getElementById("inputField").classList.add("invalid");
 				}
 				
@@ -54,9 +54,14 @@
 				<br/>
 				  
 				<p class="card-text text-center">
-					Welcome agent! While we "developed" your last batch of film, we've inculded the requisite mission materials. Please input your lock's combination and we'll get cracking on the case of the rogue agent N. E. Body. 
+					We've been able to process most of Mr. Body's notes, but his journal seems to be written in some kind of cipher based on the history books in his room. We know it's a long shot, but could you think over your acquaintance with him and find any subject that he may have held particularly dear? We're counting on you agent -- put on your thinking cap and do your best!
 				</p>
 				  
+				<br/>
+				  
+				<iframe src="https://www.youtube.com/embed/xuCn8ux2gbs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				  
+				<br/>
 				<br/>
 				  
 				<div class="panel-group" id="accordion">
@@ -67,7 +72,7 @@
 						</h4>
 					  </div>
 					  <div id="collapse1" class="panel-collapse collapse">
-						<div class="panel-body">Have you tried inspecting the box?
+						<div class="panel-body">There does seem to be an awful lot of history -- maybe there's another clue somewhere?
 						</div>
 						<br/>
 					  </div>
@@ -79,7 +84,7 @@
 						</h4>
 					  </div>
 					  <div id="collapse2" class="panel-collapse collapse">
-						<div class="panel-body">Some parts of a camera case may be removable. </div>
+						<div class="panel-body">Have you checked your thinking cap? </div>
 						<br/>
 					  </div>
 					</div>
@@ -90,7 +95,7 @@
 						</h4>
 					  </div>
 					  <div id="collapse3" class="panel-collapse collapse">
-						<div class="panel-body">3893 </div>
+						<div class="panel-body">The Spanish Inquisition </div>
 						<br/>
 					  </div>
 					</div>
@@ -103,7 +108,7 @@
 				<form class="form-submit" id="form-submit" onsubmit="return doSubmit();">
 				  <div class="form-label-group">
 					<label for="inputField">Lock Combination</label>
-					<input type="text" id="inputField" class="form-control" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+					<input type="text" id="inputField" class="form-control" placeholder=". . ." pattern="[A-Z a-z]{1,}" title="Word or phrase containing only letters, no numbers or punctuation." required>
 				  </div>
 					
 					<br/>

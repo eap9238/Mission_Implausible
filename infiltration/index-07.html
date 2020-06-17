@@ -19,16 +19,16 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		
 		<script>
-			var code = "3893";
-			var input = "0000";
+			var code = "365470";
+			var input = "000000";
 			
 			function doSubmit() {				
 				input = document.getElementById("inputField").value;
 				
 				if (input == code){
-					document.location.href = "index-02.html";
+					document.location.href = "index-08.html";
 				}
-				else if (/^([0-9]{4})$/.test(input)) {
+				else if (/^([0-9]{6})$/.test(input)) {
 					document.getElementById("inputField").classList.add("invalid");
 				}
 				
@@ -49,12 +49,12 @@
 		  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
 			<div class="card card-signin my-5">
 			  <div class="card-body">
-				<h5 class="card-title text-center">Padlock</h5>
+				<h5 class="card-title text-center">Photos</h5>
 				
 				<br/>
 				  
 				<p class="card-text text-center">
-					Welcome agent! While we "developed" your last batch of film, we've inculded the requisite mission materials. Please input your lock's combination and we'll get cracking on the case of the rogue agent N. E. Body. 
+					Mr. Body seems to have kept a safe we haven't cracked in his office, but we can't seem to find the code. we thin that it might be hidden here -- while many of his photos make sense for the role he filled, these seem strangely innocous -- see if you can find the hidden key?
 				</p>
 				  
 				<br/>
@@ -67,7 +67,7 @@
 						</h4>
 					  </div>
 					  <div id="collapse1" class="panel-collapse collapse">
-						<div class="panel-body">Have you tried inspecting the box?
+						<div class="panel-body">The photos are dated -- maybe order matters?
 						</div>
 						<br/>
 					  </div>
@@ -79,7 +79,7 @@
 						</h4>
 					  </div>
 					  <div id="collapse2" class="panel-collapse collapse">
-						<div class="panel-body">Some parts of a camera case may be removable. </div>
+						<div class="panel-body">Ssome of the photos seem to have hidden numbers disguised in the scenery. </div>
 						<br/>
 					  </div>
 					</div>
@@ -90,7 +90,7 @@
 						</h4>
 					  </div>
 					  <div id="collapse3" class="panel-collapse collapse">
-						<div class="panel-body">3893 </div>
+						<div class="panel-body">365470 </div>
 						<br/>
 					  </div>
 					</div>
@@ -102,8 +102,8 @@
 			  <div class="card-body">
 				<form class="form-submit" id="form-submit" onsubmit="return doSubmit();">
 				  <div class="form-label-group">
-					<label for="inputField">Lock Combination</label>
-					<input type="text" id="inputField" class="form-control" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+					<label for="inputField">Safe Passcode</label>
+					<input type="text" id="inputField" class="form-control" placeholder="000000" pattern="[0-9]{6}" title="Six character number code (0-9)" required>
 				  </div>
 					
 					<br/>

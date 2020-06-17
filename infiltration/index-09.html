@@ -19,16 +19,16 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		
 		<script>
-			var code = "3893";
-			var input = "0000";
+			var code = "PLATANENMUSTER";
+			var input = ". . .";
 			
 			function doSubmit() {				
 				input = document.getElementById("inputField").value;
 				
 				if (input == code){
-					document.location.href = "index-02.html";
+					document.location.href = "index-10.html";
 				}
-				else if (/^([0-9]{4})$/.test(input)) {
+				else if (/^([A-Z]{1,})$/.test(input)) {
 					document.getElementById("inputField").classList.add("invalid");
 				}
 				
@@ -49,12 +49,12 @@
 		  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
 			<div class="card card-signin my-5">
 			  <div class="card-body">
-				<h5 class="card-title text-center">Padlock</h5>
+				<h5 class="card-title text-center">Letter</h5>
 				
 				<br/>
 				  
 				<p class="card-text text-center">
-					Welcome agent! While we "developed" your last batch of film, we've inculded the requisite mission materials. Please input your lock's combination and we'll get cracking on the case of the rogue agent N. E. Body. 
+					While the contents of this letter look very interesting, we suspect there's a key word or phrase that we can't make out. Uncover the mystery and get back to us, we think we've nearly cracked the code!
 				</p>
 				  
 				<br/>
@@ -67,7 +67,7 @@
 						</h4>
 					  </div>
 					  <div id="collapse1" class="panel-collapse collapse">
-						<div class="panel-body">Have you tried inspecting the box?
+						<div class="panel-body">The letter does seem to be talking around something, how many ways can one hide information in plain sight?
 						</div>
 						<br/>
 					  </div>
@@ -79,7 +79,7 @@
 						</h4>
 					  </div>
 					  <div id="collapse2" class="panel-collapse collapse">
-						<div class="panel-body">Some parts of a camera case may be removable. </div>
+						<div class="panel-body">Try checking for extra inks. </div>
 						<br/>
 					  </div>
 					</div>
@@ -90,7 +90,7 @@
 						</h4>
 					  </div>
 					  <div id="collapse3" class="panel-collapse collapse">
-						<div class="panel-body">3893 </div>
+						<div class="panel-body">PLATANENMUSTER </div>
 						<br/>
 					  </div>
 					</div>
@@ -103,7 +103,7 @@
 				<form class="form-submit" id="form-submit" onsubmit="return doSubmit();">
 				  <div class="form-label-group">
 					<label for="inputField">Lock Combination</label>
-					<input type="text" id="inputField" class="form-control" placeholder="0000" pattern="[0-9]{4}" title="Four character number code (0-9)" required>
+					<input type="text" id="inputField" class="form-control" placeholder=". . ." pattern="[A-Z]{1,}" title="Please type the relavant word in all caps" required>
 				  </div>
 					
 					<br/>

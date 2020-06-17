@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" href="../images/favicon.ico">
+
+		<title>Mission Implausible: The Infiltration Incident</title>
+		
+		<!-- Bootstrap core CSS → -->
+		<link href="../css/bootstrap.css" rel="stylesheet">
+
+		<!-- Custom styles for this template -->
+		<link href="../css/index.css" rel="stylesheet">
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
+		<script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script>
+		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		
+		<script>
+			
+			function doSetup() {
+				confetti.start();
+				
+				//document.getElementById("player").play();
+			}
+			
+			function doSubmit() {
+				document.location.href = "../index.html";
+			}
+		</script>
+		
+		<style>
+			.in {
+				display: block !important;
+			}
+		</style>
+	</head>
+
+	<body onload="doSetup();">
+	  <div class="container">
+		<div class="row">
+		  <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+			<div class="card card-signin my-5">
+			  <div class="card-body">
+				<h5 class="card-title text-center">Congratulations!</h5>
+				
+				<br/>
+				  
+				<p class="card-text text-center">
+					You've done it! You've captured the rogue agent N. E. Body, and prevented vital secrets from falling into Axis hands! Good job agent, and thank you for your service!
+					
+					<br /> <br />
+					
+					Congratulations, you have completed the Infiltration Incident! Thanks so much for playing, and we here at Mission Implausible hope you've had a fantastic time! Please feel free to show this screen to your local GM for a special prize. 
+				</p>
+				  
+				<audio id="player" controls>
+					<source src="../audio/winner.mp3" type="audio/mp3">
+				</audio>
+				  
+				<br/>
+			  </div>
+			</div>
+			<div class="card card-signin my-5">
+			  <div class="card-body" >
+					<button class="btn btn-lg btn-primary btn-block text-uppercase" onclick="doSubmit();"> Home</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</body>
+	
+</html>
