@@ -96,10 +96,31 @@ small {
 	padding-right: 0px;
 }
 
+.imgfit.m {
+	display: none;
+}
+
+.imgfit.w {
+	display: block;
+}
+
 @media only screen and (max-width: 768px) {
-.imgfit.r || .imgfit.l {
-	padding-left: 0px;
-	padding-right: 0px;
+	.imgfit.r {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	
+	.imgfit.l {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.imgfit.m {
+		display: block;
+	}
+
+	.imgfit.w {
+		display: none;
 	}
 }
 
